@@ -1,0 +1,168 @@
+/* Container styling */
+body{
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form container */
+.form-container form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #fff;
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.form-container form:hover {
+    transform: translateY(-2px);
+}
+
+/* Task input */
+.task-input {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 250px;
+    height: 35px;
+    padding: 5px 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.task-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Button styling */
+.button {
+    background-color: crimson;
+    border: none;
+    color: white;
+    height: 35px;
+    width: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: darkred;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Tasks container */
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Individual task */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.task:hover {
+    background-color: #f1f1f1;
+}
+
+/* Custom checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+label::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg) scale(0);
+    width: 6px;
+    height: 17px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Checked state */
+label.checked::before {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+label.checked::after {
+    transform: translateY(-50%) rotate(45deg) scale(1);
+}
+
+/* Optional: hover effect on checkbox */
+label:hover::before {
+    border-color: #4CAF50;
+}
+.deleteBtn {
+    background-color: #ff4d4f; /* bright red */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.deleteBtn:hover {
+    background-color: #d9363e; /* darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
